@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: lightskyblue;
+    color: black;
+    border: 2px solid black;
+    padding: 25px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+    
+}
+
+.section {
+    background-color: lightgray;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.btn {
+margin-top: 5px;
+}
+
+.container1 {
+    background-color: lightskyblue;
+    border: 2px solid black;
+    width: 800px;
+}
+
+img {
+    height: 100%;
+    width: 400px;
+    border: 2px solid black;
+}
+

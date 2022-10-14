@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li> <span class="alert-danger">{{message}}</span></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <div class="container">
+        <header class="flex">
+            <div>
+                <h1>Edit Hand Receipt</h1>
+            </div>
+
+            <a href="/main" class="btn btn-primary">Dashboard</a>
+            <a href="/" class="btn btn-primary">Logout</a>
+        </header>
+        <form class="d-block w-50 mx-auto my-3" action="/hand_receipt/submit" method="post">
+            <div class="mb-3">
+                <label for="first_name" class="form-label">First Name:</label>
+                <input type="text" class="form-control" name="first_name" value="{{one_hand_receipt.first_name}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Last Name:</label>
+                <input type="text" class="form-control" name="last_name" value="{{one_hand_receipt.last_name}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="section" class="form-label">Section:</label>
+                <input type="text" class="form-control" name="section" value="{{one_hand_receipt.section}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="hand_receipt_number" class="form-label">Hand Receipt Number:</label>
+                <input type="text" class="form-control" name="hand_receipt_number" value="{{one_hand_receipt.hand_receipt_number}}">
+            </div>
+
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>

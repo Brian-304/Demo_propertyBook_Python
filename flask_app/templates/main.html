@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Property Book {{logged_user.first_name}}!!! </h1>
+            <div class="flex">
+
+                <div class="flex">
+                    <a href="/" class="btn btn-primary">Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <body>
+            <div class="container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">first_name</th>
+                            <th scope="col">last_name</th>
+                            <th scope="col">Section</th>
+                            <th scope="col">Hand Receipt Number</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for hand_receipt in all_hand_receipts %}
+                            <td>
+                                {{hand_receipt.poster.first_name}}
+                            </td>
+                            <td>
+                                {{hand_receipt.poster.last_name}}
+                            </td>
+
+                            <td>
+                                {{hand_receipt.section}}
+                            </td>
+                            <td>
+                                <a href="/end_items">{{hand_receipt.hand_receipt_number}}</a>
+                            </td>
+
+                            <td>
+
+                                <a href="#" class="btn btn-info">View</a>
+                                {% if session["user_id"] == hand_receipt.users_id %}
+                                <a href="/hand_receipt/edit" class="btn btn-info">edit</a>
+                                <a href="/hand_receipt/delete" class="btn btn-info">delete</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <a href="/add/receipt" class="btn btn-info">+ Hand Receipt</a>
+            </div>
+        </body>
+    </div>
+</body>
+
+</html>
