@@ -23,7 +23,7 @@
     {% endwith %}
 
     <div class="container d-flex">
-        <div class="container2"><img src="{{url_for('static', filename='/img/registration.jpg')}}" alt=""></div>
+        <div class="container2"><img class="thumb-image" src="{{url_for('static', filename='/img/registration.jpg')}}" alt=""></div>
         <div class="container1 d-flex justify-content-around">
             <form class="w-50 mx-auto my-3" action="/users/register" method="post">
                 <h1>Register</h1>

@@ -43,7 +43,7 @@ margin-top: 5px;
     width: 800px;
 }
 
-img {
+.thumb-image {
     height: 100%;
     width: 400px;
     border: 2px solid black;
