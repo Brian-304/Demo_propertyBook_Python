@@ -1,9 +1,2 @@
 # Demo-Property_Book
-# Demo-Property_Book
-# Property_Book_Python
-# Property_Book_Python
-# Demo_PropertBook_Python
-# Demo_PropertBook_Python
-# Demo_PropertBook_Python
-# Demo_propertyBook_Python
-# Demo_propertyBook_Python
+Purpose of the property book application is to assign sub-hand receipt holders to be responsible for assigned equipment. The scope of the application can be used within a small organization. The objective is to maintain accountability of equipment within the organization to prevnt losses of high dollar value items.
