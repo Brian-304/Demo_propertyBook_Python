@@ -3,3 +3,6 @@ Purpose of the property book application is to assign sub-hand receipt holders t
 
 # Login_Registration
 <img class="thumb-image" src="/flask_app/static/img/Registration_page.png" alt="Placeholder">
+
+# Main_Page
+<img class="thumb-image" src="/flask_app/static/img/Main_page.png" alt="Placeholder">
